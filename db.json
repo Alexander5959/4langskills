@@ -1,6 +1,6 @@
 {
     "users": [
-      { "id": 1, "username": "admin", "email": "admin@gmail.com", "password": "admin" }
+      { "id": 1, "username": "admin", "email": "admin@gmail.com", "password": "admin", "avatar": "default_avatar.png", "first_name": "Alex", "last_name": "Mercer", "date_of_birth": "1995-07-05", "gender": "Male", "country": "Poland", "state": "Lublin", "city": "Lublin", "phone_number": "123123141", "facebook": "test", "twitter": "test", "instagram": "test", "skype": "test", "level": 5.55 }
     ],
     "posts": [
       { "id": 1, "title": "json-server", "author": "typicode" }

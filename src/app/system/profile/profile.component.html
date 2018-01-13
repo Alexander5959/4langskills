@@ -1,0 +1,18 @@
+<div class="profile">
+  <h5 class="username">{{ user.username }}</h5>
+  <img src="assets/img/avatars/{{ user.avatar }}" alt="avatar" class="avatar">
+  <h5 class="initials">{{ user.first_name }} {{ user.last_name }}</h5>
+  <div class="social_links">
+    Links: 
+    <span class="sl">
+      <a [href]="user.facebook"><i class="fab fa-facebook"></i></a>
+      <a href="user.twitter"><i class="fab fa-twitter-square"></i></a>
+      <a href="user.instagram"><i class="fab fa-instagram"></i></a>
+      <a href="user.skype"><i class="fab fa-skype"></i></a>
+    </span>
+  </div>
+  <div class="level">
+    <span class="level-counter">Level: 1</span>
+    <mat-progress-bar mode="determinate" value="40" class="level-progress"></mat-progress-bar>
+  </div>
+</div>
