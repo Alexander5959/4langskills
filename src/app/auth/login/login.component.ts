@@ -3,6 +3,8 @@ import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Message } from '../../shared/models/message';
+import { AuthService } from '../../shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,11 @@ export class LoginComponent implements OnInit {
   signInForm: FormGroup;
   message: Message;
 
-  constructor(private usersService: UsersService) { }
+  constructor(
+    private usersService: UsersService,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.message = new Message('danger', '');
@@ -32,7 +38,10 @@ export class LoginComponent implements OnInit {
     this.usersService.getUserByEmail(this.signInForm.get('email').value).subscribe((user: User) => {
       if (user) {
         if (this.signInForm.get('password').value === user.password) {
-          alert('good');
+          window.localStorage.setItem('user', JSON.stringify(user));
+          this.message.text = '';
+          this.authService.login();
+          // this.router.navigate(['/']);
         } else {
           this.showMessage('Bad email or password');
         }

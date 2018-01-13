@@ -5,9 +5,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SystemModule } from './system/system.module';
 
 import { AppComponent } from './app.component';
 import { UsersService } from './shared/services/users.service';
+import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -20,9 +22,10 @@ import { UsersService } from './shared/services/users.service';
     MaterialModule,
     AuthModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    SystemModule
   ],
-  providers: [UsersService],
+  providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
