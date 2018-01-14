@@ -8,7 +8,7 @@ export class WordsService {
     constructor(private http: HttpClient) { }
 
     getTranslations(word: string) {
-        return this.http.get(`http://localhost/getTranslate.php?word=${word}`).map((response) => JSON.parse(response));
+        return this.http.get(`http://localhost/getTranslate.php?word=${word}`);
     }
 
 }

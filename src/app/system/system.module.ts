@@ -9,7 +9,6 @@ import { WordsService } from '../shared/services/words.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WordsComponent } from './words/words.component';
 import { SetsComponent } from './sets/sets.component';
-import { TrainingsModule } from './trainings/trainings.module';
 
 @NgModule({
     declarations: [
@@ -26,7 +25,6 @@ import { TrainingsModule } from './trainings/trainings.module';
         SystemRoutingModule,
         MaterialModule,
         HttpClientModule,
-        TrainingsModule
     ],
     // exports: [CommonModule, ReactiveFormsModule, FormsModule, SystemRoutingModule]
     providers: [WordsService]
