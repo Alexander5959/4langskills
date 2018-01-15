@@ -11,4 +11,12 @@ export class WordsService {
         return this.http.get(`http://localhost/getTranslate.php?word=${word}`);
     }
 
+    getUserSetsById(id: number) {
+        return this.http.get(`http://localhost/sets.php?id=${id}`);
+    }
+
+    getWordsFromSet(id: number, setName: string) {
+        return this.http.get(`http://localhost/allWordsFromSet.php?id=${id}&set=${setName}`);
+    }
+
 }
