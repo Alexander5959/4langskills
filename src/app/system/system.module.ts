@@ -8,15 +8,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { WordsService } from '../shared/services/words.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WordsComponent } from './words/words.component';
-import { SetsComponent } from './sets/sets.component';
+import { TrainingsModule } from './trainings/trainings.module';
 
 @NgModule({
     declarations: [
     SystemComponent,
-    ProfileComponent
-,
-    WordsComponent,
-    SetsComponent
+    ProfileComponent,
+    WordsComponent
 ],
     imports: [
         CommonModule,
@@ -25,6 +23,7 @@ import { SetsComponent } from './sets/sets.component';
         SystemRoutingModule,
         MaterialModule,
         HttpClientModule,
+        TrainingsModule
     ],
     // exports: [CommonModule, ReactiveFormsModule, FormsModule, SystemRoutingModule]
     providers: [WordsService]
