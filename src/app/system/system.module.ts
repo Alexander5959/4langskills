@@ -7,14 +7,16 @@ import { MaterialModule } from '../material.module';
 import { ProfileComponent } from './profile/profile.component';
 import { WordsService } from '../shared/services/words.service';
 import { HttpClientModule } from '@angular/common/http';
-import { WordsComponent } from './words/words.component';
+import { WordsComponent, CreateNewSetDialogComponent, AddWordDialogComponent } from './words/words.component';
 import { TrainingsModule } from './trainings/trainings.module';
 
 @NgModule({
     declarations: [
     SystemComponent,
     ProfileComponent,
-    WordsComponent
+    WordsComponent,
+    CreateNewSetDialogComponent,
+    AddWordDialogComponent
 ],
     imports: [
         CommonModule,
@@ -24,6 +26,11 @@ import { TrainingsModule } from './trainings/trainings.module';
         MaterialModule,
         HttpClientModule,
         TrainingsModule
+    ],
+    entryComponents: [
+        CreateNewSetDialogComponent,
+        WordsComponent,
+        AddWordDialogComponent
     ],
     // exports: [CommonModule, ReactiveFormsModule, FormsModule, SystemRoutingModule]
     providers: [WordsService]

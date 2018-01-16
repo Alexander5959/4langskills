@@ -6,9 +6,9 @@
     </mat-select>
 </mat-form-field>
 
-<button mat-button color="primary">Create New Set</button>
-<button mat-button color="primary">Delete Set</button>
-<button mat-raised-button color="primary" id="addWordButton">Add New Word</button>
+<button mat-button color="primary" (click)="onCreateNewSet()">Create New Set</button>
+<button mat-button color="primary" (click)="onDeleteSet()">Delete Set</button>
+<button mat-raised-button color="primary" id="addWordButton" (click)="onAddWord()">Add New Word</button>
 
 <mat-card *ngFor="let word of words">
   <mat-icon class="mat-18 sound-icon" (click)="onSound()">volume_up</mat-icon>

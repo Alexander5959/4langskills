@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Creating New Set</h1>
+<div mat-dialog-content>
+  <p>How is your new set called?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.newSetName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Don't create</button>
+  <button mat-button [mat-dialog-close]="data.newSetName" cdkFocusInitial>Ok</button>
+</div>

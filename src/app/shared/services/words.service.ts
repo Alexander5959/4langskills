@@ -19,4 +19,12 @@ export class WordsService {
         return this.http.get(`http://localhost/allWordsFromSet.php?id=${id}&set=${setName}`);
     }
 
+    setNewWordSet(id: number, setName: string) {
+        return this.http.get(`http://localhost/creatingNewSet.php?id=${id}&set=${setName}`);
+    }
+
+    deleteUserSet(id: number, setName: string) {
+        return this.http.get(`http://localhost/deleteUserSet.php?id=${id}&set=${setName}`);
+    }
+
 }
